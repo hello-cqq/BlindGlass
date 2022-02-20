@@ -5,10 +5,10 @@ import re
 import json
 from time import sleep
 import oppo.common.global_v as gl
-AccessKeyId='LTAIvG7SkQpSFaBf'
-AccessKeySecret='GLcBCI3ifC3r9FY0nlrnPSHTx66hvj'
+AccessKeyId='****'
+AccessKeySecret='****'
 auth = oss2.Auth(AccessKeyId,AccessKeySecret)
-bucketName='bearboy'
+bucketName='****'
 endpoint='http://oss-cn-shenzhen.aliyuncs.com'
 bucket = oss2.Bucket(auth,endpoint,bucketName)
 #define Image.class
