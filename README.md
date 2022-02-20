@@ -3,4 +3,4 @@
 
 # 系统设计
 
-![avatar](system-design.png)
+![Aaron Swartz](/system-design.jpg)
