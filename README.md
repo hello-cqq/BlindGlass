@@ -3,4 +3,5 @@
 
 # 系统设计
 
-![Aaron Swartz](https://github.com/cqq1996/BlindGlass/blob/main/system-design.jpg)
+![avatar](https://github.com/cqq1996/BlindGlass/blob/main/system-design.jpg)
+
