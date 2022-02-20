@@ -1,0 +1,21 @@
+oppo package
+============
+
+Subpackages
+-----------
+
+.. toctree::
+
+    oppo.baidu
+    oppo.common
+    oppo.mobile
+    oppo.raspi
+    oppo.webcommunication
+
+Module contents
+---------------
+
+.. automodule:: oppo
+    :members:
+    :undoc-members:
+    :show-inheritance:

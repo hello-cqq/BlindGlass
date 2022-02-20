@@ -1,0 +1,17 @@
+oppo.baidu package
+==================
+
+Subpackages
+-----------
+
+.. toctree::
+
+    oppo.baidu.speech
+
+Module contents
+---------------
+
+.. automodule:: oppo.baidu
+    :members:
+    :undoc-members:
+    :show-inheritance:

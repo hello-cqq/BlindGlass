@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"tech.bearboy.oppo.client","h":"","u":""},{"l":"tech.bearboy.oppo.common","h":"","u":""},{"l":"tech.bearboy.oppo.dao","h":"","u":""},{"l":"tech.bearboy.oppo.filter","h":"","u":""},{"l":"tech.bearboy.oppo.request","h":"","u":""},{"l":"tech.bearboy.oppo.websocket","h":"","u":""},{"l":"所有程序包","h":"","u":"allpackages-index.html"}]

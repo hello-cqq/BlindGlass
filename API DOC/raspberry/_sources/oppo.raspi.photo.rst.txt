@@ -1,0 +1,22 @@
+oppo.raspi.photo package
+========================
+
+Submodules
+----------
+
+oppo.raspi.photo.camera module
+------------------------------
+
+.. automodule:: oppo.raspi.photo.camera
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: oppo.raspi.photo
+    :members:
+    :undoc-members:
+    :show-inheritance:

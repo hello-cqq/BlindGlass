@@ -1,0 +1,230 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>utils module &#8212; gpu 1.0 文档</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-utils">
+<span id="utils-module"></span><h1>utils module<a class="headerlink" href="#module-utils" title="永久链接至标题">¶</a></h1>
+<dl class="function">
+<dt id="utils.bbox_iou">
+<code class="descclassname">utils.</code><code class="descname">bbox_iou</code><span class="sig-paren">(</span><em>A</em>, <em>B</em><span class="sig-paren">)</span><a class="headerlink" href="#utils.bbox_iou" title="永久链接至目标">¶</a></dt>
+<dd><p>计算两个包围盒之间的IOU</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="utils.compute_ap">
+<code class="descclassname">utils.</code><code class="descname">compute_ap</code><span class="sig-paren">(</span><em>recall</em>, <em>precision</em><span class="sig-paren">)</span><a class="headerlink" href="#utils.compute_ap" title="永久链接至目标">¶</a></dt>
+<dd><p>Compute the average precision, given the recall and precision curves.
+Code originally from <a class="reference external" href="https://github.com/rbgirshick/py-faster-rcnn">https://github.com/rbgirshick/py-faster-rcnn</a>.
+# Arguments</p>
+<blockquote>
+<div>recall:    The recall curve (list).
+precision: The precision curve (list).</div></blockquote>
+<dl class="docutils">
+<dt># Returns</dt>
+<dd>The average precision as computed in py-faster-rcnn.</dd>
+</dl>
+<p>根据召回率和准确率计算最后的平均准确率</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="utils.cpu_nms">
+<code class="descclassname">utils.</code><code class="descname">cpu_nms</code><span class="sig-paren">(</span><em>boxes</em>, <em>scores</em>, <em>num_classes</em>, <em>max_boxes=50</em>, <em>score_thresh=0.3</em>, <em>iou_thresh=0.5</em><span class="sig-paren">)</span><a class="headerlink" href="#utils.cpu_nms" title="永久链接至目标">¶</a></dt>
+<dd><p>/<em>———————————– 在CPU上进行nms操作 —————————————</em>/
+:param boxes ==&gt; shape [1, 10647, 4]:
+:param scores ==&gt; shape [1, 10647, num_classes]:</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="utils.draw_boxes">
+<code class="descclassname">utils.</code><code class="descname">draw_boxes</code><span class="sig-paren">(</span><em>image</em>, <em>boxes</em>, <em>scores</em>, <em>labels</em>, <em>classes</em>, <em>detection_size</em>, <em>font='./data/font/FiraMono-Medium.otf'</em>, <em>show=True</em><span class="sig-paren">)</span><a class="headerlink" href="#utils.draw_boxes" title="永久链接至目标">¶</a></dt>
+<dd><p>:param boxes, shape of  [num, 4]
+:param scores, shape of [num, ]
+:param labels, shape of [num, ]
+:param image,
+:param classes, the return list from the function <cite>read_coco_names</cite></p>
+<blockquote>
+<div>在原图上画出包围盒, 返回有包围盒的结果图</div></blockquote>
+</dd></dl>
+
+<dl class="function">
+<dt id="utils.evaluate">
+<code class="descclassname">utils.</code><code class="descname">evaluate</code><span class="sig-paren">(</span><em>y_pred</em>, <em>y_true</em>, <em>iou_thresh=0.5</em>, <em>score_thresh=0.3</em><span class="sig-paren">)</span><a class="headerlink" href="#utils.evaluate" title="永久链接至目标">¶</a></dt>
+<dd><p>评估模型得到准确率和召回率</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="utils.freeze_graph">
+<code class="descclassname">utils.</code><code class="descname">freeze_graph</code><span class="sig-paren">(</span><em>sess</em>, <em>output_file</em>, <em>output_node_names</em><span class="sig-paren">)</span><a class="headerlink" href="#utils.freeze_graph" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="utils.get_anchors">
+<code class="descclassname">utils.</code><code class="descname">get_anchors</code><span class="sig-paren">(</span><em>anchors_path</em>, <em>image_h</em>, <em>image_w</em><span class="sig-paren">)</span><a class="headerlink" href="#utils.get_anchors" title="永久链接至目标">¶</a></dt>
+<dd><p>loads the anchors from a file</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="utils.gpu_nms">
+<code class="descclassname">utils.</code><code class="descname">gpu_nms</code><span class="sig-paren">(</span><em>boxes</em>, <em>scores</em>, <em>num_classes</em>, <em>max_boxes=50</em>, <em>score_thresh=0.3</em>, <em>iou_thresh=0.5</em><span class="sig-paren">)</span><a class="headerlink" href="#utils.gpu_nms" title="永久链接至目标">¶</a></dt>
+<dd><p>/<em>———————————– NMS on gpu —————————————</em>/</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">参数:</th><td class="field-body"><ul class="first last simple">
+<li><strong>-- tensor of shape</strong><strong> [</strong><strong>1</strong><strong>, </strong><strong>10647</strong><strong>, </strong><strong>4</strong><strong>] </strong><strong># 10647 boxes</strong> (<em>boxes</em>) – </li>
+<li><strong>-- tensor of shape</strong><strong> [</strong><strong>1</strong><strong>, </strong><strong>10647</strong><strong>, </strong><strong>num_classes</strong><strong>]</strong><strong>, </strong><strong>scores of boxes</strong> (<em>scores</em>) – </li>
+<li><strong>-- the return value of function read_coco_names</strong> (<em>classes</em>) – </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Note:Applies Non-max suppression (NMS) to set of boxes. Prunes away boxes that have high
+intersection-over-union (IOU) overlap with previously selected boxes.</p>
+<p>max_boxes – integer, maximum number of predicted boxes you’d like, default is 20
+score_thresh – real value, if [ highest class probability score &lt; score_threshold]</p>
+<blockquote>
+<div>then get rid of the corresponding box</div></blockquote>
+<p>iou_thresh – real value, “intersection over union” threshold used for NMS filtering</p>
+<p>对包围盒在GPU上进行NMS操作，返回包围盒，得分和类别</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="utils.load_weights">
+<code class="descclassname">utils.</code><code class="descname">load_weights</code><span class="sig-paren">(</span><em>var_list</em>, <em>weights_file</em><span class="sig-paren">)</span><a class="headerlink" href="#utils.load_weights" title="永久链接至目标">¶</a></dt>
+<dd><p>Loads and converts pre-trained weights.
+:param var_list: list of network variables.
+:param weights_file: name of the binary file.
+:return: list of assign ops
+读取预训练模型的参数</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="utils.py_nms">
+<code class="descclassname">utils.</code><code class="descname">py_nms</code><span class="sig-paren">(</span><em>boxes</em>, <em>scores</em>, <em>max_boxes=50</em>, <em>iou_thresh=0.5</em><span class="sig-paren">)</span><a class="headerlink" href="#utils.py_nms" title="永久链接至目标">¶</a></dt>
+<dd><p>Pure Python NMS baseline.</p>
+<dl class="docutils">
+<dt>Arguments: boxes =&gt; shape of [-1, 4], the value of ‘-1’ means that dont know the</dt>
+<dd><blockquote class="first">
+<div>exact number of boxes</div></blockquote>
+<p class="last">scores =&gt; shape of [-1,]
+max_boxes =&gt; representing the maximum of boxes to be selected by non_max_suppression
+iou_thresh =&gt; representing iou_threshold for deciding to keep boxes</p>
+</dd>
+</dl>
+<p># 纯python版本的NMS操作，返回包围盒id</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="utils.read_coco_names">
+<code class="descclassname">utils.</code><code class="descname">read_coco_names</code><span class="sig-paren">(</span><em>class_file_name</em><span class="sig-paren">)</span><a class="headerlink" href="#utils.read_coco_names" title="永久链接至目标">¶</a></dt>
+<dd><p>读取coco数据集的名字</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="utils.read_pb_return_tensors">
+<code class="descclassname">utils.</code><code class="descname">read_pb_return_tensors</code><span class="sig-paren">(</span><em>graph</em>, <em>pb_file</em>, <em>return_elements</em><span class="sig-paren">)</span><a class="headerlink" href="#utils.read_pb_return_tensors" title="永久链接至目标">¶</a></dt>
+<dd><p>根据pb文件读取tensors</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="utils.resize_image_correct_bbox">
+<code class="descclassname">utils.</code><code class="descname">resize_image_correct_bbox</code><span class="sig-paren">(</span><em>image</em>, <em>boxes</em>, <em>image_h</em>, <em>image_w</em><span class="sig-paren">)</span><a class="headerlink" href="#utils.resize_image_correct_bbox" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">gpu</a></h1>
+
+
+
+
+
+
+
+
+<h3>导航</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>快速搜索</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="转向" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, bearboy.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.6.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="_sources/utils.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

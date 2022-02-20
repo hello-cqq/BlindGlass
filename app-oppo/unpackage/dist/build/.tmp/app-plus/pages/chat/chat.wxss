@@ -1,0 +1,104 @@
+
+page {
+	width: 100%;
+	height: 100%;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	    -ms-flex-wrap: wrap;
+	        flex-wrap: wrap;
+	-webkit-box-align: start;
+	-webkit-align-items: flex-start;
+	    -ms-flex-align: start;
+	        align-items: flex-start;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	/* background: rgba(249, 249, 249, 1); */
+}
+.index {
+	display:-webkit-box;
+	display:-webkit-flex;
+	display:-ms-flexbox;
+	display:flex;
+	-webkit-box-orient:vertical;
+	-webkit-box-direction:reverse;
+	-webkit-flex-direction:column-reverse;
+	    -ms-flex-direction:column-reverse;
+	        flex-direction:column-reverse;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	width:100%;
+	height:100%;
+	margin: 0;
+	overflow: hidden;
+	background-color: #ffcccc;
+}
+.chat_container{
+	margin: 20rpx;
+	width: 710rpx;
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	    -ms-flex: 1;
+	        flex: 1;
+	border-radius: 5rpx;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+}
+.msg_container{
+	width: 710rpx;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: row;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+	margin-left: 20rpx;
+	margin-bottom: 5rpx;
+	height: 90rpx;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+}
+.msg_container ._input{
+	width: 570rpx;
+	height: 76%;
+	background-color: #FFFFFF;
+	border-style: solid;
+	border-color: #FFFFFF;
+}
+.msg_container ._button{
+	width: 125rpx;
+	height: 90%;
+	background-color: #33CCFF;
+	margin-right: 0;
+	font-size: 16px;
+	opacity: 0.8;
+}
+.msg_row{
+	padding: 5rpx;
+	margin-bottom: 20rpx;
+}
+._label{
+	background-color: #00FF99;
+	border-radius: 10rpx;
+	padding: 5rpx;
+	opacity: 0.7;
+}
+

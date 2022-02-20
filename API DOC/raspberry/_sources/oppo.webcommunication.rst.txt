@@ -1,0 +1,22 @@
+oppo.webcommunication package
+=============================
+
+Submodules
+----------
+
+oppo.webcommunication.communication module
+------------------------------------------
+
+.. automodule:: oppo.webcommunication.communication
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: oppo.webcommunication
+    :members:
+    :undoc-members:
+    :show-inheritance:

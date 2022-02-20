@@ -1,0 +1,30 @@
+oppo.common package
+===================
+
+Submodules
+----------
+
+oppo.common.common module
+-------------------------
+
+.. automodule:: oppo.common.common
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+oppo.common.wake module
+-----------------------
+
+.. automodule:: oppo.common.wake
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: oppo.common
+    :members:
+    :undoc-members:
+    :show-inheritance:

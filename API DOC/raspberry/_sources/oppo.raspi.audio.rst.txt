@@ -1,0 +1,22 @@
+oppo.raspi.audio package
+========================
+
+Submodules
+----------
+
+oppo.raspi.audio.sound module
+-----------------------------
+
+.. automodule:: oppo.raspi.audio.sound
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: oppo.raspi.audio
+    :members:
+    :undoc-members:
+    :show-inheritance:

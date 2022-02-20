@@ -1,0 +1,47 @@
+{
+    "pages" : [
+        {
+            "path" : "pages/index/index",
+            "style" : {
+                "navigationBarTitleText" : "监控"
+            }
+        },
+        {
+            "path" : "pages/chat/chat",
+            "style" : {
+                "navigationBarTitleText" : "聊天"
+            }
+        },
+        {
+            "path" : "pages/msg/msg",
+            "style" : {
+				"navigationBarTitleText" : "详情"
+			}
+        }
+    ],
+    "globalStyle" : {
+        "navigationBarTextStyle" : "white",
+        "navigationBarBackgroundColor" : "#00BFFF",
+        "backgroundColor" : "#fbf9fe"
+    },
+    "tabBar" : {
+        "color" : "#444444",
+        "selectedColor" : "#FF80AB",
+        "borderStyle" : "black",
+        "backgroundColor" : "#ffffff",
+        "list" : [
+            {
+                "pagePath" : "pages/index/index",
+                "iconPath" : "static/index-0.png",
+                "selectedIconPath" : "static/index-1.png",
+                "text" : "首页"
+            },
+            {
+                "pagePath" : "pages/chat/chat",
+                "iconPath" : "static/chat-0.png",
+                "selectedIconPath" : "static/chat-1.png",
+                "text" : "Chat"
+            }
+        ]
+    }
+}

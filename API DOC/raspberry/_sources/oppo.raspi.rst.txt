@@ -1,0 +1,18 @@
+oppo.raspi package
+==================
+
+Subpackages
+-----------
+
+.. toctree::
+
+    oppo.raspi.audio
+    oppo.raspi.photo
+
+Module contents
+---------------
+
+.. automodule:: oppo.raspi
+    :members:
+    :undoc-members:
+    :show-inheritance:

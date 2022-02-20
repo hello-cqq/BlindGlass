@@ -1,0 +1,2 @@
+<import src="./chat.vue.wxml" />
+    <template is="a4d5f56a" data="{{ ...$root['0'], $root }}"/>

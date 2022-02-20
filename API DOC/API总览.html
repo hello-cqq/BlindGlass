@@ -1,0 +1,247 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />  
+		<title>盲人导航系统</title>
+		<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
+		<script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
+		<script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+		<style>
+			html,body{
+				width: 100%;
+				height: 100%;
+				margin: 0;
+			}
+			body{
+				overflow: auto;
+				text-align: center;
+				padding-top: 30px;
+			}
+			.p-box{
+				width: 1100px;
+				height: 650px;
+				margin: auto;
+				vertical-align: center;
+				
+			}
+			.box-header{
+				width: 100%;
+				height: 70px;
+				float: left;
+			}
+			.box-catalog{
+				width: 150px;
+				height: 580px;
+				float: left;
+				background-color: lightgray;
+			}
+			.box-content{
+				width: 950px;
+				height: 580px;
+				float: left;
+				background-color: aliceblue;
+				overflow: auto;
+				text-align: center;
+			}
+			.nav-link{
+				color: black;
+			}
+			.content-div{
+				width: 95%;
+				height: 100%;
+				margin: auto;
+				display: flex;
+				flex-direction: column;
+			}
+			.c-div-main{
+				flex: 1;
+				/* background-color: white; */
+			}
+			h4{
+				text-align: left;
+				font-size: 24px;
+			}
+			h5{
+				text-align: left;
+				font-size: 18px;
+			}
+			ol li{
+				text-align: left;
+			}
+			.env-tb tr td{
+				text-align: left;
+				width: 100px;
+				border: #000000 solid;
+			}
+			.env-tb{
+				margin-left: 30px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="p-box" id="vue-app">
+			<div class="box-header">
+				<h3><i style="color:crimson ;margin:auto">HUSTMEN</i>——盲人导航机器人</h3>
+			</div>
+			<div class="box-catalog">
+				<ul class="nav flex-column">
+					<li class="nav-item" v-for="(c,index) in cate" style="cursor: pointer;">
+					  <a class="nav-link" v-bind:id="c.id" >{{c.name}}</a>
+					</li>
+				</ul>
+			</div>
+			<div class="box-content">
+				<div class="content-div" v-bind:name="cate[0].id">
+					<h4>{{cate[0].name}}</h4>
+					<div class="c-div-main">
+						<ul>
+							<li>
+								<h5>项目描述</h5>
+								<p>	基于树莓派，AI算法，java后台，阿里云、百度云相关服务，uni-app实现的可以辅助盲人出行的智能语音播报机器人</p>
+							</li>
+							<li>
+								<h5>实现功能</h5>
+								<ol>
+									<li>实时定位</li>
+									<li>街道目标与盲道图像及时识别</li>
+									<li>查询附近地点</li>
+									<li>监护人与盲人及时通讯(文字语音相互转换)</li>
+									<li>说出目的地唤醒百度地图语音导航</li>
+								</ol>
+							</li>
+							<br />
+							<li>
+								<h5>环境准备</h5>
+								<table class="env-tb">
+									<tr>
+										<td>主体</td>
+										<td colspan="6">环境or服务</td>
+									</tr>
+									<tr>
+										<td>树莓派</td>
+										<td colspan="6" style="width: 600px;">内存>8G TF卡，500w像素摄像头，USB免驱声卡，3.5mm音响或耳机，3.5mm麦克风,USB锂电池，Python3.5</td>
+									</tr>
+									<tr>
+										<td>Java后台</td>
+										<td colspan="6">JDK8,Tomcat9,Maven3.6.0,Spring5.1.1,Ubuntu16.0.4</td>
+									</tr>
+									<tr>
+										<td>uni-app</td>
+										<td colspan="6">HBuilderX,Node.js,Vue.js</td>
+									</tr>
+									<tr>
+										
+										<td>AI算法</td>
+										<td colspan="6">Ubuntu16.0.4,Python2.7,Tensorflow1.6,anaconda1.6,conda4.3</td>
+									</tr>
+									<tr>
+										
+										<td>阿里云</td>
+										<td colspan="6">ECS服务器,对象存储OSS,备案域名,视频直播,CDN域名加速</td>
+									</tr>
+									<tr>
+										
+										<td>百度API</td>
+										<td colspan="8">百度在线语音识别Python SDK,百度地图web API</td>
+									</tr>
+								</table>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="content-div" v-bind:name="cate[1].id">
+					<h4>{{cate[1].name}}</h4>
+					<div class="c-div-main">
+						<iframe src="./java/index.html" width="100%" height="100%"></iframe>
+					</div>
+				</div>
+				<div class="content-div" v-bind:name="cate[2].id">
+					<h4>{{cate[2].name}}</h4>
+					<div class="c-div-main">
+						<iframe src="./raspberry/index.html" width="100%" height="100%"></iframe>
+					</div class="c-div-main">
+				</div>
+				<div class="content-div" v-bind:name="cate[3].id">
+					<h4>{{cate[3].name}}</h4>
+					<div class="c-div-main">
+						<iframe src="./gpu/index.html" width="100%" height="100%"></iframe>
+					</div>
+				</div>
+				<div class="content-div" v-bind:name="cate[4].id">
+					<h4>{{cate[4].name}}</h4>
+					<div class="c-div-main">
+						<video src="../盲人导航演示视频.mp4" width="100%" height="100%"></video>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script>
+		var cate = [
+			{
+				id:'0',
+				name:'项目介绍'
+			},
+			{
+				id:'1',
+				name:'Java后台API'
+			},
+			{
+				id:'2',
+				name:'树莓派API'
+			},
+			{
+				id:'3',
+				name:'图像算法API'
+			},
+			{
+				id:'4',
+				name:'演示视频'
+			}
+		];
+// 		var javaAPI = [
+// 			{
+// 				'packageName':'tech.bearboy.oppo.client',
+// 				'description':'用于存放客户端',
+// 				[
+// 					{
+// 						'className':'Photo.java',
+// 						'description':'表示图片对象的bean类',
+// 						'cybl':['imgUrl:图片url','msg:识别后的描述信息','time:日期和时间拼接的字符串，表示当前时间','location:地点','text:文本检测结果','target:目标检测结果'],
+// 						[
+// 							{
+// 								'method':'',
+// 								'description':'',
+// 								'param':'',
+// 								'return':''
+// 							}
+// 						]
+// 					}
+// 				]
+// 			}
+// 		];
+		var vm = new Vue({
+			el: '#vue-app',
+			data: {
+				cate: cate
+			},
+			methods: {
+				
+			}
+		});
+		$(document).ready(function(){
+			$('.content-div').hide();
+			$('.content-div:eq(0)').show();
+			$('.nav-link:eq(0)').css('color','red');
+			$('.nav-link').click(function(){
+				$('.nav-link').css('color','black');
+				$(this).css('color','red');
+				$('.content-div').hide();
+				var c = $(this).attr('id');
+				$('.content-div:eq('+c+')').show();
+			});
+		});
+	</script>
+</html>

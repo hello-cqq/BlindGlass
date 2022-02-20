@@ -1,0 +1,22 @@
+oppo.baidu.speech package
+=========================
+
+Submodules
+----------
+
+oppo.baidu.speech.speech\_interaction module
+--------------------------------------------
+
+.. automodule:: oppo.baidu.speech.speech_interaction
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: oppo.baidu.speech
+    :members:
+    :undoc-members:
+    :show-inheritance:

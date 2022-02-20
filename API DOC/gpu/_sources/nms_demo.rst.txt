@@ -1,0 +1,7 @@
+nms\_demo module
+================
+
+.. automodule:: nms_demo
+    :members:
+    :undoc-members:
+    :show-inheritance:
